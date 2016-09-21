@@ -1,6 +1,6 @@
 # Random Users [![Build Status](https://travis-ci.org/bradybeck/random_users.svg?branch=master)](https://travis-ci.org/bradybeck/random_users)
 
-Just a static list of Random Users to be used for for all things.
+Just a static list of Random Users to be used for for all things pulled from `https://randomuser.me/`.
 
 ## Usage
 
@@ -11,6 +11,18 @@ import 'package:random_users/random_users.dart';
 List<RandomUser> users = getUsers(1000);
 print('Users: ${users.map((user) => user.firstName)}');
 ```
+
+#### User data currently includes:
+- firstName
+- lastName
+- phoneNumber
+- userName
+- password
+- email
+- gender
+- largePicture
+- mediumPicture
+- thumbNail
 
 ## Development
 
