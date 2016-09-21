@@ -1,4 +1,4 @@
-# Random Users
+# Random Users [![Build Status](https://travis-ci.org/bradybeck/random_users.svg?branch=master)](https://travis-ci.org/bradybeck/random_users)
 
 Just a static list of Random Users to be used for for all things.
 
