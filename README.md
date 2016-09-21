@@ -7,6 +7,7 @@ Just a static list of Random Users to be used for for all things.
 ```dart
 import 'package:random_users/random_users.dart';
 
+// get the same 1000 users every time.
 List<RandomUser> users = getUsers(1000);
 print('Users: ${users.map((user) => user.firstName)}');
 ```
