@@ -11,6 +11,7 @@ class RandomUser {
   String mediumPicture;
   String thumbNail;
 
+  RandomUser();
   RandomUser.fromJson(json) {
     firstName = json['name']['first'];
     lastName = json['name']['last'];
