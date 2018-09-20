@@ -1,27 +1,29 @@
-/// Class that holds data from `randomuser.me`.
+import 'package:random_users/src/model/gender.dart';
+
+/// The RandomUser model that represents the data in the format of `randomuser.me`.
 class RandomUser {
   String firstName;
   String lastName;
   String phoneNumber;
-  String userName;
+  String username;
   String password;
   String email;
-  String gender;
+  Gender gender;
   String largePicture;
   String mediumPicture;
-  String thumbNail;
+  String thumbnail;
 
   RandomUser();
-  RandomUser.fromJson(json) {
+  RandomUser.fromMap(json) {
     firstName = json['name']['first'];
     lastName = json['name']['last'];
     phoneNumber = json['phone'];
-    gender = json['gender'];
-    userName = json['login']['username'];
+    gender = Gender.fromValue(json['gender']);
+    username = json['login']['username'];
     password = json['login']['password'];
     email = json['email'];
     largePicture = json['picture']['large'];
     mediumPicture = json['picture']['medium'];
-    thumbNail = json['picture']['thumbnail'];
+    thumbnail = json['picture']['thumbnail'];
   }
 }

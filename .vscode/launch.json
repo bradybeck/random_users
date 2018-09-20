@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Dart: Run Example",
+            "program": "example/random_users_example.dart",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Dart: Run Test",
+            "program": "test/unit/random_users_test.dart",
+            "request": "launch",
+            "type": "dart"
+        },
+    ]
+}

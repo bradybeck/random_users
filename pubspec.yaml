@@ -1,16 +1,13 @@
 name: random_users
 description: Just a static list of Random Users to be used for for all things.
-version: 0.0.3
-author: Brady Becker <bradybeck@gmail.com>
+version: 1.0.0
+authors: 
+- Brady Becker <bradybeck@gmail.com>
+- Jeroen Meijer <jeroenfkmeijer@gmail.com>
 homepage: http://github.com/bradybeck/random_users
 
 environment:
-  sdk: '>=1.0.0 <2.0.0'
+  sdk: '>=2.0.0-dev <3.0.0'
 
 dev_dependencies:
-  analyzer: ^0.27.3
-  coverage: ^0.7.2
-  dart_dev: ^1.1.1
-  dart_style: ^0.2.4
-  dartdoc: ">=0.8.0 <0.10.0"
-  test: ^0.12.4
+  test: ^1.3.3

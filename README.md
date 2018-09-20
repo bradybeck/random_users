@@ -2,36 +2,38 @@
 [![Pub](https://img.shields.io/pub/v/random_users.svg)](https://pub.dartlang.org/packages/random_users)
 [![Build Status](https://travis-ci.org/bradybeck/random_users.svg?branch=master)](https://travis-ci.org/bradybeck/random_users)
 
-Just a static list of Random Users to be used for for all things pulled from `https://randomuser.me/`.
+## About
+Random Users is an offline API and wrapper for mock user profiles retrieved from https://randomuser.me/.
 
 ## Usage
 
 ```dart
 import 'package:random_users/random_users.dart';
 
-// get the same 1000 users every time.
+// Get the same 3 users every time.
 List<RandomUser> users = getUsers(1000);
-print('Users: ${users.map((user) => user.firstName)}');
+print('Users: ${users.map((user) => user.toString())}');
+
+// Get 3 users randomly selected from the data source.
+List<RandomUser> usersShuffled = getUsers(1000, random: true);
+print('Shuffled users: ${usersShuffled.map((user) => user.toString())}');
+
 ```
 
-#### User data currently includes:
-- firstName
-- lastName
-- phoneNumber
-- userName
-- password
-- email
-- gender
-- largePicture
-- mediumPicture
-- thumbNail
+### Data source
+The data source used contains 2000 documents and is 2.3 MB in size.
 
-## Development
+Every document contains the following fields.
+- `String` firstName
+- `String` lastName
+- `String` phoneNumber
+- `String` username
+- `String` password
+- `String` email
+- `Gender` gender _(custom enum value)_
+- `String` largePicture
+- `String` mediumPicture
+- `String` thumbNail
 
-Random Users leverages the [dart_dev](https://github.com/Workiva/dart_dev) package for most of its
-tooling needs, including static analysis, code formatting, running tests, collecting coverage,
-and serving examples. Check out the dart_dev readme for more information.
-
-#### Testing - `pub run dart_dev test`
-
-#### Formatting - `pub run dart_dev format`
+### Testing
+Run `pub run test`.
